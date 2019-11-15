@@ -3,7 +3,7 @@
 set -e
 
 if [ -f yarn.lock ]; then
-    yarn --non-interactive --silent --ignore-scripts --production=false
+    yarn --non-interactive --silent --ignore-scripts --production=false --frozen-lockfile
 else
     NODE_ENV=development npm install
 fi
